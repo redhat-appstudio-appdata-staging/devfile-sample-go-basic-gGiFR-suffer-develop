@@ -9,7 +9,6 @@ metadata:
     app.kubernetes.io/name: devfile-sample-go-basic
     app.kubernetes.io/part-of: devfile-sample-go-basic
   name: devfile-sample-go-basic
-  namespace: ergonzale-tenant
 spec:
   replicas: 1
   revisionHistoryLimit: 0
@@ -26,7 +25,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-go-basic
     spec:
       containers:
-      - image: go-image:latest
+      - image: quay.io/redhat-user-workloads-stage/ergonzale-tenant/devfile-sample-go-basic/devfile-sample-go-basic@sha256:4056f455fd47f6ad67f4ba5ffb4c1ecfcde98d80823bb35446e548dcb5eef941
         name: my-go
         ports:
         - containerPort: 8081
